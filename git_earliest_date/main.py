@@ -1,18 +1,18 @@
 import sys
+import pathlib
 
 from . import logger
+from . import get_repo_dirs
 
 
 def main() -> None:
     try:
         logger.init_logger(True)
 
-        logger.get_logger().debug("test log message")
-        logger.get_logger().info("test log message")
-        logger.get_logger().warn("test log message")
-        logger.get_logger().error("test log message")
-
-        raise Exception("test exception")
+        base_dir = pathlib.Path(sys.argv[1])
+        repo_dirs = get_repo_dirs.get_repo_dirs(base_dir)
+        for repo_dir in repo_dirs:
+            logger.get_logger().debug(repo_dir)
     except Exception as exception:
         logger.get_logger().error(exception)
         sys.exit(1)
