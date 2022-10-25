@@ -16,11 +16,8 @@ def main() -> None:
             get_root_commits.get_root_commits(repo_dir)
             for repo_dir in repo_dirs
         )
-        nonempty_repo_infos = (
-            repo_info for repo_info in repo_infos if not repo_info.is_empty_repo
-        )
-        for repo_info in nonempty_repo_infos:
-            logger.get_logger().debug(repo_info)
+        for repo_info in repo_infos:
+            logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
     except Exception as exception:
         logger.get_logger().error(exception)
         sys.exit(1)

@@ -3,14 +3,17 @@ import dataclasses
 import datetime
 import pathlib
 
+import dataclasses_json
 import git
 import termcolor
 
+from . import fields
+
 
 @dataclasses.dataclass
-class RepoInfo:
-    repo_dir: pathlib.Path
-    root_commits: list[CommitInfo]
+class RepoInfo(dataclasses_json.DataClassJsonMixin):
+    repo_dir: pathlib.Path = fields.path_field()
+    root_commits: list[CommitInfo]  # type: ignore[misc]
 
     @property
     def is_empty_repo(self) -> bool:
@@ -18,13 +21,13 @@ class RepoInfo:
 
 
 @dataclasses.dataclass
-class CommitInfo:
+class CommitInfo(dataclasses_json.DataClassJsonMixin):
     hash: str
     author: PersonInfo
-    author_datetime: datetime.datetime
-    committer: PersonInfo
-    committer_datetime: datetime.datetime
-    message: str
+    author_datetime: datetime.datetime = fields.datetime_field()
+    committer: PersonInfo  # type: ignore[misc]
+    committer_datetime: datetime.datetime = fields.datetime_field()
+    message: str  # type: ignore[misc]
 
     @classmethod
     def _from_commit(cls, commit: git.objects.commit.Commit) -> CommitInfo:
@@ -44,7 +47,7 @@ class CommitInfo:
 
 
 @dataclasses.dataclass
-class PersonInfo:
+class PersonInfo(dataclasses_json.DataClassJsonMixin):
     name: str | None
     email: str | None
 
