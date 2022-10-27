@@ -57,13 +57,15 @@ class PersonInfo(dataclasses_json.DataClassJsonMixin):
 
 
 def _get_commit_message(commit: git.objects.commit.Commit) -> str:
-    if isinstance(commit.message, str):
-        return commit.message
-    elif isinstance(commit.message, bytes):
-        return commit.message.decode(commit.encoding)
-    else:
-        formatted_message_type = termcolor.colored(type(commit.message), "red")
-        raise RuntimeError(
-            "the commit message has "
-            + f"an unexpected type {formatted_message_type}",
-        )
+    match commit.message:
+        case str():
+            return commit.message
+        case bytes():
+            return commit.message.decode(commit.encoding)
+        case _:
+            message_type = type(commit.message)
+            formatted_message_type = termcolor.colored(message_type, "red")
+            raise RuntimeError(
+                "the commit message has "
+                + f"an unexpected type {formatted_message_type}",
+            )
