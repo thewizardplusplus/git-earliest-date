@@ -20,6 +20,15 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
     def is_empty_repo(self) -> bool:
         return len(self.root_commits) == 0
 
+    def get_earliest_root_commit(self, datetime_kind: PersonKind) -> CommitInfo:
+        # I use a local import because of a circular import
+        from . import get_earliest_entity
+
+        return get_earliest_entity.get_earliest_commit(
+            self.root_commits,
+            datetime_kind,
+        )
+
 
 @dataclasses.dataclass
 class CommitInfo(dataclasses_json.DataClassJsonMixin):
