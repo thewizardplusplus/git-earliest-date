@@ -2,6 +2,7 @@ from __future__ import annotations
 import dataclasses
 import datetime
 import pathlib
+import enum
 
 import dataclasses_json
 import git
@@ -29,6 +30,20 @@ class CommitInfo(dataclasses_json.DataClassJsonMixin):
     committer_datetime: datetime.datetime = fields.datetime_field()
     message: str  # type: ignore[misc]
 
+    def get_person(self, kind: PersonKind) -> PersonInfo:
+        match kind:
+            case PersonKind.AUTHOR:
+                return self.author
+            case PersonKind.COMMITTER:
+                return self.committer
+
+    def get_datetime(self, kind: PersonKind) -> datetime.datetime:
+        match kind:
+            case PersonKind.AUTHOR:
+                return self.author_datetime
+            case PersonKind.COMMITTER:
+                return self.committer_datetime
+
     @classmethod
     def _from_commit(cls, commit: git.objects.commit.Commit) -> CommitInfo:
         hash = commit.binsha.hex()
@@ -54,6 +69,12 @@ class PersonInfo(dataclasses_json.DataClassJsonMixin):
     @classmethod
     def _from_actor(cls, actor: git.util.Actor) -> PersonInfo:
         return PersonInfo(actor.name, actor.email)
+
+
+@enum.unique
+class PersonKind(enum.Enum):
+    AUTHOR = enum.auto()
+    COMMITTER = enum.auto()
 
 
 def _get_commit_message(commit: git.objects.commit.Commit) -> str:
