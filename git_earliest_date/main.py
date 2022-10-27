@@ -24,16 +24,16 @@ def main() -> None:
         for repo_info in repo_infos_1:
             logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
 
-        all_commits = (
-            commit
+        nonempty_repo_infos = (
+            repo_info
             for repo_info in repo_infos_2
-            for commit in repo_info.root_commits
+            if not repo_info.is_empty_repo
         )
-        earliest_commit = get_earliest_entity.get_earliest_commit(
-            all_commits,
+        earliest_repo = get_earliest_entity.get_earliest_repo(
+            nonempty_repo_infos,
             entities.PersonKind.AUTHOR,
         )
-        logger.get_logger().debug(earliest_commit.to_json(ensure_ascii=False))
+        logger.get_logger().debug(earliest_repo.to_json(ensure_ascii=False))
     except Exception as exception:
         logger.get_logger().error(exception)
         sys.exit(1)
