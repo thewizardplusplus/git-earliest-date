@@ -26,7 +26,7 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
         from . import get_earliest_entity
 
         return get_earliest_entity.get_earliest_commit(
-            self.root_commits,
+            iter(self.root_commits),
             datetime_kind,
         )
 
