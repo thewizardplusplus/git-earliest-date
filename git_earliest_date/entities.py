@@ -3,6 +3,7 @@ import dataclasses
 import datetime
 import pathlib
 import enum
+import typing
 
 import dataclasses_json
 import git
@@ -40,18 +41,10 @@ class CommitInfo(dataclasses_json.DataClassJsonMixin):
     message: str  # type: ignore[misc]
 
     def get_person(self, kind: PersonKind) -> PersonInfo:
-        match kind:
-            case PersonKind.AUTHOR:
-                return self.author
-            case PersonKind.COMMITTER:
-                return self.committer
+        return self._get_attribute_by_kind(kind)
 
     def get_datetime(self, kind: PersonKind) -> datetime.datetime:
-        match kind:
-            case PersonKind.AUTHOR:
-                return self.author_datetime
-            case PersonKind.COMMITTER:
-                return self.committer_datetime
+        return self._get_attribute_by_kind(kind, suffix="_datetime")
 
     @classmethod
     def _from_commit(cls, commit: git.objects.commit.Commit) -> CommitInfo:
@@ -68,6 +61,15 @@ class CommitInfo(dataclasses_json.DataClassJsonMixin):
             commit.committed_datetime,
             message,
         )
+
+    def _get_attribute_by_kind(
+        self,
+        kind: PersonKind,
+        *,
+        suffix: str = "",
+    ) -> typing.Any:
+        name = kind.name.lower() + suffix
+        return getattr(self, name)
 
 
 @dataclasses.dataclass
