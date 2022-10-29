@@ -18,8 +18,9 @@ def get_root_commits(repo_dir: pathlib.Path) -> entities.RepoInfo:
 
         return entities.RepoInfo(repo_dir, [])
 
+    absolute_repo_dir = repo_dir.resolve(strict=True)
     root_commits = _find_root_commits(repo)
-    return entities.RepoInfo(repo_dir, root_commits)
+    return entities.RepoInfo(absolute_repo_dir, root_commits)
 
 
 def _is_repo_empty(repo: git.repo.base.Repo) -> bool:
