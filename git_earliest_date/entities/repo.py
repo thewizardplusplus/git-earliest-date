@@ -24,7 +24,7 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
     def get_earliest_root_commit(
         self,
         datetime_kind: person.PersonKind,
-    ) -> commit.CommitInfo:
+    ) -> commit.CommitInfo | None:
         # I use a local import because of a circular import
         from . import get_earliest_entity
 
@@ -54,9 +54,11 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
         datetime_kind: person.PersonKind,
     ) -> None:
         key = datetime_kind.name.lower() + "_earliest_root_commit"
+
+        earliest_root_commit = self.get_earliest_root_commit(datetime_kind)
         data[key] = (
-            self.get_earliest_root_commit(datetime_kind).to_dict()
-            if not self.is_empty_repo
+            earliest_root_commit.to_dict()
+            if earliest_root_commit is not None
             else None
         )
 

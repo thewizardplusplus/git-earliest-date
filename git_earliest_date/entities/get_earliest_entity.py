@@ -11,6 +11,8 @@ def get_earliest_repo(
 ) -> repo.RepoInfo:
     def _repo_key(repo: repo.RepoInfo) -> datetime.datetime:
         earliest_root_commit = repo.get_earliest_root_commit(datetime_kind)
+        assert earliest_root_commit is not None
+
         return earliest_root_commit.get_datetime(datetime_kind)
 
     nonempty_repos = _filter_nonempty_repos(repos)
@@ -24,14 +26,12 @@ def get_earliest_repo(
 def get_earliest_commit(
     commits: commit.CommitInfoSequence,
     datetime_kind: person.PersonKind,
-) -> commit.CommitInfo:
+) -> commit.CommitInfo | None:
     def _commit_key(commit: commit.CommitInfo) -> datetime.datetime:
         return commit.get_datetime(datetime_kind)
 
+    # without a separate variable, the mypy tool infers the wrong type
     earliest_commit = min(commits, key=_commit_key, default=None)
-    if earliest_commit is None:
-        raise RuntimeError("the commit sequence is empty")
-
     return earliest_commit
 
 
