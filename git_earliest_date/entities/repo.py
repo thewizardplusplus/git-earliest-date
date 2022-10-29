@@ -68,6 +68,14 @@ class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
     def is_empty(self) -> bool:
         return len(self.repos) == 0
 
+    @property
+    def author_earliest_repo(self) -> RepoInfo | None:
+        return self.get_earliest_repo(person.PersonKind.AUTHOR)
+
+    @property
+    def committer_earliest_repo(self) -> RepoInfo | None:
+        return self.get_earliest_repo(person.PersonKind.COMMITTER)
+
     def get_earliest_repo(
         self,
         datetime_kind: person.PersonKind,
@@ -81,24 +89,19 @@ class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
         )
 
     # override the method in order to add computable properties to JSON
+    # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
     def to_dict(self, encode_json: bool = False) -> JSONObject:
         data = super().to_dict(encode_json=encode_json)
 
-        # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
         data["is_empty"] = self.is_empty
-
-        self._add_earliest_repo_to_dict(data, person.PersonKind.AUTHOR)
-        self._add_earliest_repo_to_dict(data, person.PersonKind.COMMITTER)
+        data["author_earliest_repo"] = _to_dict_or_none(
+            self.author_earliest_repo,
+        )
+        data["committer_earliest_repo"] = _to_dict_or_none(
+            self.committer_earliest_repo,
+        )
 
         return data
-
-    def _add_earliest_repo_to_dict(
-        self,
-        data: JSONObject,
-        datetime_kind: person.PersonKind,
-    ) -> None:
-        key = datetime_kind.name.lower() + "_earliest_repo"
-        data[key] = _to_dict_or_none(self.get_earliest_repo(datetime_kind))
 
 
 def _to_dict_or_none(
