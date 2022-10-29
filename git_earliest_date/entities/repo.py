@@ -21,6 +21,14 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
     def is_empty_repo(self) -> bool:
         return len(self.root_commits) == 0
 
+    @property
+    def author_earliest_root_commit(self) -> commit.CommitInfo | None:
+        return self.get_earliest_root_commit(person.PersonKind.AUTHOR)
+
+    @property
+    def committer_earliest_root_commit(self) -> commit.CommitInfo | None:
+        return self.get_earliest_root_commit(person.PersonKind.COMMITTER)
+
     def get_earliest_root_commit(
         self,
         datetime_kind: person.PersonKind,
@@ -34,33 +42,19 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
         )
 
     # override the method in order to add computable properties to JSON
+    # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
     def to_dict(self, encode_json: bool = False) -> JSONObject:
         data = super().to_dict(encode_json=encode_json)
 
-        # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
         data["is_empty_repo"] = self.is_empty_repo
-
-        self._add_earliest_root_commit_to_dict(data, person.PersonKind.AUTHOR)
-        self._add_earliest_root_commit_to_dict(
-            data,
-            person.PersonKind.COMMITTER,
+        data["author_earliest_root_commit"] = _to_dict_or_none(
+            self.author_earliest_root_commit,
+        )
+        data["committer_earliest_root_commit"] = _to_dict_or_none(
+            self.committer_earliest_root_commit,
         )
 
         return data
-
-    def _add_earliest_root_commit_to_dict(
-        self,
-        data: JSONObject,
-        datetime_kind: person.PersonKind,
-    ) -> None:
-        key = datetime_kind.name.lower() + "_earliest_root_commit"
-
-        earliest_root_commit = self.get_earliest_root_commit(datetime_kind)
-        data[key] = (
-            earliest_root_commit.to_dict()
-            if earliest_root_commit is not None
-            else None
-        )
 
 
 RepoInfoSequence: typing.TypeAlias = typing.Iterator[RepoInfo]
@@ -106,3 +100,9 @@ class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
             if not self.is_empty
             else None
         )
+
+
+def _to_dict_or_none(
+    value: dataclasses_json.DataClassJsonMixin | None,
+) -> JSONObject | None:
+    return value.to_dict() if value is not None else None
