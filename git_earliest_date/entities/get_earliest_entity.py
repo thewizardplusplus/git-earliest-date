@@ -8,7 +8,7 @@ from . import commit
 def get_earliest_repo(
     repos: repo.RepoInfoSequence,
     datetime_kind: person.PersonKind,
-) -> repo.RepoInfo:
+) -> repo.RepoInfo | None:
     def _repo_key(repo: repo.RepoInfo) -> datetime.datetime:
         earliest_root_commit = repo.get_earliest_root_commit(datetime_kind)
         assert earliest_root_commit is not None
@@ -16,10 +16,8 @@ def get_earliest_repo(
         return earliest_root_commit.get_datetime(datetime_kind)
 
     nonempty_repos = _filter_nonempty_repos(repos)
+    # without a separate variable, the mypy tool infers the wrong type
     earliest_repo = min(nonempty_repos, key=_repo_key, default=None)
-    if earliest_repo is None:
-        raise RuntimeError("the repo sequence is empty")
-
     return earliest_repo
 
 

@@ -68,7 +68,10 @@ class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
     def is_empty(self) -> bool:
         return len(self.repos) == 0
 
-    def get_earliest_repo(self, datetime_kind: person.PersonKind) -> RepoInfo:
+    def get_earliest_repo(
+        self,
+        datetime_kind: person.PersonKind,
+    ) -> RepoInfo | None:
         # I use a local import because of a circular import
         from . import get_earliest_entity
 
@@ -95,11 +98,7 @@ class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
         datetime_kind: person.PersonKind,
     ) -> None:
         key = datetime_kind.name.lower() + "_earliest_repo"
-        data[key] = (
-            self.get_earliest_repo(datetime_kind).to_dict()
-            if not self.is_empty
-            else None
-        )
+        data[key] = _to_dict_or_none(self.get_earliest_repo(datetime_kind))
 
 
 def _to_dict_or_none(
