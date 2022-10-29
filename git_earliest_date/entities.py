@@ -12,6 +12,9 @@ import termcolor
 from . import fields
 
 
+JSONObject = dict[str, dataclasses_json.core.Json]
+
+
 @dataclasses.dataclass
 class RepoInfo(dataclasses_json.DataClassJsonMixin):
     repo_dir: pathlib.Path = fields.path_field()
@@ -28,6 +31,30 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
         return get_earliest_entity.get_earliest_commit(
             iter(self.root_commits),
             datetime_kind,
+        )
+
+    # override the method in order to add computable properties to JSON
+    def to_dict(self, encode_json: bool = False) -> JSONObject:
+        data = super().to_dict(encode_json=encode_json)
+
+        # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
+        data["is_empty_repo"] = self.is_empty_repo
+
+        self._add_earliest_root_commit_to_dict(data, PersonKind.AUTHOR)
+        self._add_earliest_root_commit_to_dict(data, PersonKind.COMMITTER)
+
+        return data
+
+    def _add_earliest_root_commit_to_dict(
+        self,
+        data: JSONObject,
+        datetime_kind: PersonKind,
+    ) -> None:
+        key = datetime_kind.name.lower() + "_earliest_root_commit"
+        data[key] = (
+            self.get_earliest_root_commit(datetime_kind).to_dict()
+            if not self.is_empty_repo
+            else None
         )
 
 
