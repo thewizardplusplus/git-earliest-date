@@ -16,6 +16,48 @@ JSONObject = dict[str, dataclasses_json.core.Json]
 
 
 @dataclasses.dataclass
+class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
+    repos: list[RepoInfo]
+
+    @property
+    def is_empty(self) -> bool:
+        return len(self.repos) == 0
+
+    def get_earliest_repo(self, datetime_kind: PersonKind) -> RepoInfo:
+        # I use a local import because of a circular import
+        from . import get_earliest_entity
+
+        return get_earliest_entity.get_earliest_repo(
+            iter(self.repos),
+            datetime_kind,
+        )
+
+    # override the method in order to add computable properties to JSON
+    def to_dict(self, encode_json: bool = False) -> JSONObject:
+        data = super().to_dict(encode_json=encode_json)
+
+        # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
+        data["is_empty"] = self.is_empty
+
+        self._add_earliest_repo_to_dict(data, PersonKind.AUTHOR)
+        self._add_earliest_repo_to_dict(data, PersonKind.COMMITTER)
+
+        return data
+
+    def _add_earliest_repo_to_dict(
+        self,
+        data: JSONObject,
+        datetime_kind: PersonKind,
+    ) -> None:
+        key = datetime_kind.name.lower() + "_earliest_repo"
+        data[key] = (
+            self.get_earliest_repo(datetime_kind).to_dict()
+            if not self.is_empty
+            else None
+        )
+
+
+@dataclasses.dataclass
 class RepoInfo(dataclasses_json.DataClassJsonMixin):
     repo_dir: pathlib.Path = fields.path_field()
     root_commits: list[CommitInfo]  # type: ignore[misc]

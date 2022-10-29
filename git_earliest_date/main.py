@@ -6,7 +6,6 @@ from . import logger
 from . import get_repo_dirs
 from . import get_root_commits
 from . import entities
-from . import get_earliest_entity
 
 
 def main() -> None:
@@ -24,11 +23,8 @@ def main() -> None:
         for repo_info in repo_infos_1:
             logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
 
-        earliest_repo = get_earliest_entity.get_earliest_repo(
-            repo_infos_2,
-            entities.PersonKind.AUTHOR,
-        )
-        logger.get_logger().debug(earliest_repo.to_json(ensure_ascii=False))
+        repo_info_group = entities.RepoInfoGroup(list(repo_infos_2))
+        logger.get_logger().debug(repo_info_group.to_json(ensure_ascii=False))
     except Exception as exception:
         logger.get_logger().error(exception)
         sys.exit(1)
