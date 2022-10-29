@@ -1,5 +1,5 @@
-import pathlib
 import typing
+import pathlib
 import itertools
 
 import termcolor
@@ -7,7 +7,7 @@ import termcolor
 from . import logger
 
 
-PathSequence = typing.Iterator[pathlib.Path]
+PathSequence: typing.TypeAlias = typing.Iterator[pathlib.Path]
 
 
 def get_repo_dirs(base_dir_sequence: PathSequence) -> PathSequence:

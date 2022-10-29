@@ -5,7 +5,7 @@ import itertools
 from . import logger
 from . import get_repo_dirs
 from . import get_root_commits
-from . import entities
+from .entities import repo
 
 
 def main() -> None:
@@ -23,7 +23,7 @@ def main() -> None:
         for repo_info in repo_infos_1:
             logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
 
-        repo_info_group = entities.RepoInfoGroup(list(repo_infos_2))
+        repo_info_group = repo.RepoInfoGroup(list(repo_infos_2))
         logger.get_logger().debug(repo_info_group.to_json(ensure_ascii=False))
     except Exception as exception:
         logger.get_logger().error(exception)
