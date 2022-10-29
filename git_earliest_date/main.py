@@ -1,7 +1,7 @@
 import sys
-import pathlib
 import itertools
 
+from . import options as options_module
 from . import logger
 from . import get_repo_dirs
 from . import get_root_commits
@@ -10,10 +10,10 @@ from .entities import repo
 
 def main() -> None:
     try:
-        logger.init_logger(True)
+        options = options_module.parse_options()
+        logger.init_logger(options.verbose)
 
-        base_dirs = (pathlib.Path(arg) for arg in sys.argv[1:])
-        repo_dirs = get_repo_dirs.get_repo_dirs(base_dirs)
+        repo_dirs = get_repo_dirs.get_repo_dirs(iter(options.base_dirs))
         repo_infos = (
             get_root_commits.get_root_commits(repo_dir)
             for repo_dir in repo_dirs
