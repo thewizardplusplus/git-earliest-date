@@ -32,4 +32,4 @@ def datetime_field() -> datetime.datetime:
 # see also https://github.com/python/typeshed/blob/7dd4d0882da704afd6bec77aca99c88377eef742/stdlib/3.7/dataclasses.pyi#L34
 def _field_with_json_encoder(json_encoder: typing.Callable[[_T], str]) -> _T:
     json_config = dataclasses_json.config(encoder=json_encoder)
-    return dataclasses.field(metadata=json_config)
+    return typing.cast(_T, dataclasses.field(metadata=json_config))

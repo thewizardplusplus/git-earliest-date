@@ -21,5 +21,30 @@ git-earliest-date = "git_earliest_date.main:main"
 [tool.setuptools.dynamic]
 version = { attr = "git_earliest_date.__version__" }
 
+[tool.mypy]
+disallow_any_unimported = true
+# disallow_any_expr = true
+disallow_any_decorated = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_untyped_decorators = true
+
+no_implicit_optional = true
+
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+warn_incomplete_stub = true
+
+strict_concatenate = true
+strict_equality = true
+
+show_column_numbers = true
+show_error_codes = true
+
 [tool.black]
 line-length = 80

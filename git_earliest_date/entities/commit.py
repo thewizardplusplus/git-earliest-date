@@ -5,7 +5,6 @@ import typing
 
 import dataclasses_json
 import git
-import termcolor
 
 from . import person
 from . import fields
@@ -37,10 +36,13 @@ class CommitInfo(dataclasses_json.DataClassJsonMixin):
         )
 
     def get_person(self, kind: person.PersonKind) -> person.PersonInfo:
-        return self._get_attribute_by_kind(kind)
+        return typing.cast(person.PersonInfo, self._get_attribute_by_kind(kind))
 
     def get_datetime(self, kind: person.PersonKind) -> datetime.datetime:
-        return self._get_attribute_by_kind(kind, suffix="_datetime")
+        return typing.cast(
+            datetime.datetime,
+            self._get_attribute_by_kind(kind, suffix="_datetime"),
+        )
 
     def _get_attribute_by_kind(
         self,
@@ -61,10 +63,3 @@ def _get_commit_message(commit: git.objects.commit.Commit) -> str:
             return commit.message
         case bytes():
             return commit.message.decode(commit.encoding)
-        case _:
-            message_type = type(commit.message)
-            formatted_message_type = termcolor.colored(message_type, "red")
-            raise RuntimeError(
-                "the commit message has "
-                + f"an unexpected type {formatted_message_type}",
-            )
