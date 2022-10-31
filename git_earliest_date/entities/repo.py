@@ -62,7 +62,10 @@ RepoInfoSequence: typing.TypeAlias = typing.Iterator[RepoInfo]
 
 @dataclasses.dataclass
 class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
-    repos: list[RepoInfo]
+    repos: list[RepoInfo] = typing.cast(
+        list[RepoInfo],
+        fields.custom_json_field(),
+    )
 
     @property
     def is_empty(self) -> bool:
