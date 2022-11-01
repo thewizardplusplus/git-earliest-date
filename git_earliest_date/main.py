@@ -24,7 +24,7 @@ def main() -> None:
             logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
 
         repo_info_group = repo.RepoInfoGroup(list(repo_infos_2))
-        logger.get_logger().debug(repo_info_group.to_json(ensure_ascii=False))
+        print(repo_info_group.to_json(ensure_ascii=False))
     except Exception as exception:
         logger.get_logger().error(exception)
         sys.exit(1)
