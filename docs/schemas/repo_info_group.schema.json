@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/repo_info_group.schema.json",
+  "title": "RepoInfoGroup",
+  "type": "object",
+  "required": [
+    "repos",
+    "is_empty",
+    "author_earliest_repo",
+    "committer_earliest_repo"
+  ],
+  "properties": {
+    "repos": {
+      "type": "array",
+      "items": {
+        "$ref": "repo_info.schema.json"
+      }
+    },
+    "is_empty": {
+      "type": "boolean"
+    },
+    "author_earliest_repo": {
+      "oneOf": [{ "$ref": "repo_info.schema.json" }, { "type": "null" }]
+    },
+    "committer_earliest_repo": {
+      "oneOf": [{ "$ref": "repo_info.schema.json" }, { "type": "null" }]
+    }
+  }
+}
