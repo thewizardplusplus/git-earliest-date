@@ -3,13 +3,14 @@ import dataclasses
 import pathlib
 
 import dataclasses_json
+from dataclasses_json.core import Json
 
 from . import fields
 from . import commit
 from . import person
 
 
-JSONObject: typing.TypeAlias = dict[str, dataclasses_json.core.Json]
+JSONObject: typing.TypeAlias = dict[str, Json]
 
 
 @dataclasses.dataclass

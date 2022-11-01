@@ -1,6 +1,6 @@
 import pathlib
 
-import git
+import git.repo.base
 import termcolor
 
 from .entities import repo as repo_module
@@ -12,7 +12,7 @@ def get_root_commits(repo_dir: pathlib.Path) -> repo_module.RepoInfo:
     formatted_repo_dir = termcolor.colored(str(repo_dir), "yellow")
     logger.get_logger().debug(f"was found repo {formatted_repo_dir}")
 
-    repo = git.Repo(repo_dir)
+    repo = git.repo.base.Repo(repo_dir)
     if _is_repo_empty(repo):
         logger.get_logger().warn(f"repo {formatted_repo_dir} is empty")
 

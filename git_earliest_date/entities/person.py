@@ -3,7 +3,7 @@ import enum
 import dataclasses
 
 import dataclasses_json
-import git
+import git.util
 
 
 @enum.unique

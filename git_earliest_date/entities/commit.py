@@ -4,7 +4,7 @@ import datetime
 import typing
 
 import dataclasses_json
-import git
+import git.objects.commit
 
 from . import person
 from . import fields
