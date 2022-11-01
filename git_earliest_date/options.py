@@ -7,7 +7,7 @@ from . import __version__
 
 @dataclasses.dataclass
 class OptionGroup:
-    verbose: bool = False
+    verbose: int = 0
     base_dirs: list[pathlib.Path] = dataclasses.field(default_factory=list)
 
 
@@ -26,8 +26,12 @@ def parse_options() -> OptionGroup:
     parser.add_argument(
         "-V",
         "--verbose",
-        action="store_true",
-        help="verbose logging",
+        action="count",
+        default=0,
+        help=(
+            "verbose logging; can be specified several times: "
+            + "the more times, the more verbose"
+        ),
     )
 
     parser.add_argument(

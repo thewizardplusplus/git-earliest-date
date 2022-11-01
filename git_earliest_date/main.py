@@ -11,7 +11,7 @@ from .entities import repo
 def main() -> None:
     try:
         options = options_module.parse_options()
-        logger.init_logger(options.verbose)
+        logger.init_logger(options.verbose > 0)
 
         repo_dirs = get_repo_dirs.get_repo_dirs(iter(options.base_dirs))
         repo_infos = (
@@ -20,8 +20,9 @@ def main() -> None:
         )
         repo_infos_1, repo_infos_2 = itertools.tee(repo_infos, 2)
 
-        for repo_info in repo_infos_1:
-            logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
+        if options.verbose > 1:
+            for repo_info in repo_infos_1:
+                logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
 
         repo_info_group = repo.RepoInfoGroup(list(repo_infos_2))
         print(repo_info_group.to_json(ensure_ascii=False))
