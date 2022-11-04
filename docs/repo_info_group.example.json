@@ -1,0 +1,1109 @@
+{
+  "repos": [
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-exercises-frontend",
+      "root_commits": [
+        {
+          "hash": "af693a2c15659e1a2a9e0e0fedc340b91ddf5576",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-04-14T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-04-14T23:00:00.000000+03:00",
+          "message": "Initialize the project using the Create React App tool\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "af693a2c15659e1a2a9e0e0fedc340b91ddf5576",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-04-14T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-04-14T23:00:00.000000+03:00",
+        "message": "Initialize the project using the Create React App tool\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "af693a2c15659e1a2a9e0e0fedc340b91ddf5576",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-04-14T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-04-14T23:00:00.000000+03:00",
+        "message": "Initialize the project using the Create React App tool\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-hashmap",
+      "root_commits": [
+        {
+          "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+          "message": "Add a base of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+        "message": "Add a base of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-atari-cli",
+      "root_commits": [
+        {
+          "hash": "556257963e6c3ef8d747e117f1b51ec27dd33ec8",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2020-04-29T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2020-04-29T23:00:00.000000+03:00",
+          "message": ""
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "556257963e6c3ef8d747e117f1b51ec27dd33ec8",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-04-29T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-04-29T23:00:00.000000+03:00",
+        "message": ""
+      },
+      "committer_earliest_root_commit": {
+        "hash": "556257963e6c3ef8d747e117f1b51ec27dd33ec8",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-04-29T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-04-29T23:00:00.000000+03:00",
+        "message": ""
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-exercises-worker",
+      "root_commits": [
+        {
+          "hash": "7296dbf4f9bd1befd84b6952d2a875c959c3a4f2",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-03-26T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-03-26T23:00:00.000000+03:00",
+          "message": "Add basics of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "7296dbf4f9bd1befd84b6952d2a875c959c3a4f2",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-26T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-26T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "7296dbf4f9bd1befd84b6952d2a875c959c3a4f2",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-26T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-26T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-cache",
+      "root_commits": [
+        {
+          "hash": "645da77414f8eb7493d18eb906b8651d739a5c89",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-07-02T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-07-02T23:00:00.000000+03:00",
+          "message": "Add a base of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "645da77414f8eb7493d18eb906b8651d739a5c89",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-07-02T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-07-02T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "645da77414f8eb7493d18eb906b8651d739a5c89",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-07-02T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-07-02T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-exercises-backend",
+      "root_commits": [
+        {
+          "hash": "af44933d833b4a11ce4e675145bd9405d760e86f",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-03-22T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-03-22T23:00:00.000000+03:00",
+          "message": "Add basics of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "af44933d833b4a11ce4e675145bd9405d760e86f",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-22T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-22T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "af44933d833b4a11ce4e675145bd9405d760e86f",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-22T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-22T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-chess-cli",
+      "root_commits": [
+        {
+          "hash": "8e0613dc3b869d38651efe4e9a58bccb303ad7f4",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-10-09T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-10-09T23:00:00.000000+03:00",
+          "message": ""
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "8e0613dc3b869d38651efe4e9a58bccb303ad7f4",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-10-09T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-10-09T23:00:00.000000+03:00",
+        "message": ""
+      },
+      "committer_earliest_root_commit": {
+        "hash": "8e0613dc3b869d38651efe4e9a58bccb303ad7f4",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-10-09T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-10-09T23:00:00.000000+03:00",
+        "message": ""
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-blockchain",
+      "root_commits": [
+        {
+          "hash": "800a61fcf6d760cfe011cca3d8ab0b9b0690b61b",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-03-05T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-03-05T23:00:00.000000+03:00",
+          "message": "Add a base of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "800a61fcf6d760cfe011cca3d8ab0b9b0690b61b",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-05T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-05T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "800a61fcf6d760cfe011cca3d8ab0b9b0690b61b",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-05T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-05T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-crawler",
+      "root_commits": [
+        {
+          "hash": "b9676e81ab435c9da05879c6e296a919bbdd72fe",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2020-08-03T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2020-08-03T23:00:00.000000+03:00",
+          "message": "Add a base of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "b9676e81ab435c9da05879c6e296a919bbdd72fe",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-08-03T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-08-03T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "b9676e81ab435c9da05879c6e296a919bbdd72fe",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-08-03T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-08-03T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-chess-models",
+      "root_commits": [
+        {
+          "hash": "8ab7f1e31216163538808461e992baedfdd1f0e5",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-05-22T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-05-22T23:00:00.000000+03:00",
+          "message": ""
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "8ab7f1e31216163538808461e992baedfdd1f0e5",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-05-22T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-05-22T23:00:00.000000+03:00",
+        "message": ""
+      },
+      "committer_earliest_root_commit": {
+        "hash": "8ab7f1e31216163538808461e992baedfdd1f0e5",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-05-22T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-05-22T23:00:00.000000+03:00",
+        "message": ""
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-chess-minimax",
+      "root_commits": [
+        {
+          "hash": "562ee96e5d96b4657d0d35942b3ec99b0f9fa63b",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-06-03T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-06-03T23:00:00.000000+03:00",
+          "message": ""
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "562ee96e5d96b4657d0d35942b3ec99b0f9fa63b",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-06-03T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-06-03T23:00:00.000000+03:00",
+        "message": ""
+      },
+      "committer_earliest_root_commit": {
+        "hash": "562ee96e5d96b4657d0d35942b3ec99b0f9fa63b",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-06-03T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-06-03T23:00:00.000000+03:00",
+        "message": ""
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-atari-montecarlo",
+      "root_commits": [
+        {
+          "hash": "d80160ef0217e499359adc6e23074aa4ac736196",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-12-27T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-12-27T23:00:00.000000+03:00",
+          "message": ""
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "d80160ef0217e499359adc6e23074aa4ac736196",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-12-27T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-12-27T23:00:00.000000+03:00",
+        "message": ""
+      },
+      "committer_earliest_root_commit": {
+        "hash": "d80160ef0217e499359adc6e23074aa4ac736196",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-12-27T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-12-27T23:00:00.000000+03:00",
+        "message": ""
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-link-shortener-integration",
+      "root_commits": [
+        {
+          "hash": "424bcf1dc57f74564f53cc087a60a8d1f8c4caae",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-05-30T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-05-30T23:00:00.000000+03:00",
+          "message": "Add basics of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "424bcf1dc57f74564f53cc087a60a8d1f8c4caae",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-05-30T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-05-30T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "424bcf1dc57f74564f53cc087a60a8d1f8c4caae",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-05-30T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-05-30T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-atari-models",
+      "root_commits": [
+        {
+          "hash": "69e5415e47732770ffdd83fbc9f71b9b1b6aebcc",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-12-17T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-12-17T23:00:00.000000+03:00",
+          "message": ""
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "69e5415e47732770ffdd83fbc9f71b9b1b6aebcc",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-12-17T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-12-17T23:00:00.000000+03:00",
+        "message": ""
+      },
+      "committer_earliest_root_commit": {
+        "hash": "69e5415e47732770ffdd83fbc9f71b9b1b6aebcc",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-12-17T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-12-17T23:00:00.000000+03:00",
+        "message": ""
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-rabbitmq-utils",
+      "root_commits": [
+        {
+          "hash": "c484f4b0ef353f7ae031cf93e6fe9b4dd987232a",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-05-20T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-05-20T23:00:00.000000+03:00",
+          "message": "Add basics of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "c484f4b0ef353f7ae031cf93e6fe9b4dd987232a",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-05-20T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-05-20T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "c484f4b0ef353f7ae031cf93e6fe9b4dd987232a",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-05-20T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-05-20T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-link-shortener-frontend",
+      "root_commits": [
+        {
+          "hash": "615d65a04914676b5f16e350a3e8e61a0138f26e",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2020-03-29T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2020-03-29T23:00:00.000000+03:00",
+          "message": "Initialize project using Create React App\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "615d65a04914676b5f16e350a3e8e61a0138f26e",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-03-29T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-03-29T23:00:00.000000+03:00",
+        "message": "Initialize project using Create React App\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "615d65a04914676b5f16e350a3e8e61a0138f26e",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-03-29T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-03-29T23:00:00.000000+03:00",
+        "message": "Initialize project using Create React App\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-link-shortener-backend",
+      "root_commits": [
+        {
+          "hash": "380f7149879e88e766ccc9061cd7c365e7af39ec",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2019-09-17T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2019-09-17T23:00:00.000000+03:00",
+          "message": "Add a base of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "380f7149879e88e766ccc9061cd7c365e7af39ec",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-09-17T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-09-17T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "380f7149879e88e766ccc9061cd7c365e7af39ec",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-09-17T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-09-17T23:00:00.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-exercises-integration",
+      "root_commits": [
+        {
+          "hash": "18ae65196794e8fec0c754d3c02fa543c020462e",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-04-25T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-04-25T23:00:00.000000+03:00",
+          "message": "Add basics of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "18ae65196794e8fec0c754d3c02fa543c020462e",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-04-25T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-04-25T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "18ae65196794e8fec0c754d3c02fa543c020462e",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-04-25T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-04-25T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-html-selector",
+      "root_commits": [
+        {
+          "hash": "3ef511f2e4e3c55f69336522ca902babfe7a3bf9",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2020-07-13T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2020-07-13T23:00:00.000000+03:00",
+          "message": "Add the base of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "3ef511f2e4e3c55f69336522ca902babfe7a3bf9",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-07-13T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-07-13T23:00:00.000000+03:00",
+        "message": "Add the base of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "3ef511f2e4e3c55f69336522ca902babfe7a3bf9",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-07-13T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-07-13T23:00:00.000000+03:00",
+        "message": "Add the base of the project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-http-utils",
+      "root_commits": [
+        {
+          "hash": "c97032521b760eb350433e3a9e4dbeaa0790b6d1",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2020-05-04T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2020-05-04T23:00:00.000000+03:00",
+          "message": "Extract the httputils package from the go-link-shortener project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "c97032521b760eb350433e3a9e4dbeaa0790b6d1",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-05-04T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-05-04T23:00:00.000000+03:00",
+        "message": "Extract the httputils package from the go-link-shortener project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "c97032521b760eb350433e3a9e4dbeaa0790b6d1",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2020-05-04T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2020-05-04T23:00:00.000000+03:00",
+        "message": "Extract the httputils package from the go-link-shortener project\n"
+      }
+    },
+    {
+      "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-code-runner",
+      "root_commits": [
+        {
+          "hash": "13cbbcdca0cfe93f01b7b1d07c4b72f82f920ee7",
+          "author": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "author_datetime": "2021-03-20T23:00:00.000000+03:00",
+          "committer": {
+            "name": "thewizardplusplus",
+            "email": "thewizardplusplus@yandex.ru"
+          },
+          "committer_datetime": "2021-03-20T23:00:00.000000+03:00",
+          "message": "Add basics of the project\n"
+        }
+      ],
+      "is_empty_repo": false,
+      "author_earliest_root_commit": {
+        "hash": "13cbbcdca0cfe93f01b7b1d07c4b72f82f920ee7",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-20T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-20T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      },
+      "committer_earliest_root_commit": {
+        "hash": "13cbbcdca0cfe93f01b7b1d07c4b72f82f920ee7",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2021-03-20T23:00:00.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2021-03-20T23:00:00.000000+03:00",
+        "message": "Add basics of the project\n"
+      }
+    }
+  ],
+  "is_empty": false,
+  "author_earliest_repo": {
+    "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-hashmap",
+    "root_commits": [
+      {
+        "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    ],
+    "is_empty_repo": false,
+    "author_earliest_root_commit": {
+      "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+      "author": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+      "committer": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+      "message": "Add a base of the project\n"
+    },
+    "committer_earliest_root_commit": {
+      "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+      "author": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+      "committer": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+      "message": "Add a base of the project\n"
+    }
+  },
+  "committer_earliest_repo": {
+    "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-hashmap",
+    "root_commits": [
+      {
+        "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+        "author": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+        "committer": {
+          "name": "thewizardplusplus",
+          "email": "thewizardplusplus@yandex.ru"
+        },
+        "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+        "message": "Add a base of the project\n"
+      }
+    ],
+    "is_empty_repo": false,
+    "author_earliest_root_commit": {
+      "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+      "author": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+      "committer": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+      "message": "Add a base of the project\n"
+    },
+    "committer_earliest_root_commit": {
+      "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+      "author": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "author_datetime": "2019-04-30T00:56:14.000000+03:00",
+      "committer": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "committer_datetime": "2019-04-30T02:08:45.000000+03:00",
+      "message": "Add a base of the project\n"
+    }
+  }
+}
