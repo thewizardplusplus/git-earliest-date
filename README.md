@@ -1,6 +1,10 @@
 # git-earliest-date
 
+![](docs/screenshot.png)
+
 The utility for searching the earliest root commit in a repository and the earliest repository in a repository group.
+
+Repositories are searched recursively in the specified base directories. The earliest root commit and the earliest repository in a repository group are determined in the two ways: by author datetime and by committer datetime. Collected data are represented in the JSON format.
 
 ## Features
 
