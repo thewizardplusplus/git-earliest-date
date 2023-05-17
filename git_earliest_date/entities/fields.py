@@ -9,7 +9,8 @@ from dataclasses_json.core import Json
 
 
 CustomJSONField: typing.TypeAlias = (
-    dataclasses_json.DataClassJsonMixin
+    None
+    | dataclasses_json.DataClassJsonMixin
     | collections.abc.Collection[dataclasses_json.DataClassJsonMixin]
     | collections.abc.Mapping[typing.Any, dataclasses_json.DataClassJsonMixin]
 )
@@ -47,8 +48,10 @@ def custom_json_field() -> CustomJSONField:
                 }
             case collections.abc.Collection():
                 return [item.to_dict() for item in value]
-            case _:
+            case dataclasses_json.DataClassJsonMixin():
                 return value.to_dict()
+            case _:
+                return None
 
     return _field_with_json_encoder(_custom_json_field_encoder)
 
