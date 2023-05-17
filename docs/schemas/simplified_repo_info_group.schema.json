@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/simplified_repo_info_group.schema.json",
+  "title": "SimplifiedRepoInfoGroup",
+  "type": "object",
+  "required": ["earliest_repo", "is_empty"],
+  "properties": {
+    "earliest_repo": {
+      "oneOf": [
+        { "$ref": "simplified_repo_info.schema.json" },
+        { "type": "null" }
+      ]
+    },
+    "is_empty": {
+      "type": "boolean"
+    }
+  }
+}

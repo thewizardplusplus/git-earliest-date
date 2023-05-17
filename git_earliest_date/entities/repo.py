@@ -98,8 +98,35 @@ class RepoInfo(BaseRepoInfo):
 RepoInfoSequence: typing.TypeAlias = typing.Iterator[RepoInfo]
 
 
+class BaseRepoInfoGroup(dataclasses_json.DataClassJsonMixin):
+    @property
+    @abc.abstractmethod
+    def is_empty(self) -> bool:
+        ...
+
+    # override the method in order to add computable properties to JSON
+    # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
+    def to_dict(self, encode_json: bool = False) -> JSONObject:
+        data = super().to_dict(encode_json=encode_json)
+        data["is_empty"] = self.is_empty
+
+        return data
+
+
 @dataclasses.dataclass
-class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
+class SimplifiedRepoInfoGroup(BaseRepoInfoGroup):
+    earliest_repo: SimplifiedRepoInfo | None = typing.cast(
+        SimplifiedRepoInfo | None,
+        fields.custom_json_field(),
+    )
+
+    @property
+    def is_empty(self) -> bool:
+        return self.earliest_repo is None
+
+
+@dataclasses.dataclass
+class RepoInfoGroup(BaseRepoInfoGroup):
     repos: list[RepoInfo] = typing.cast(
         list[RepoInfo],
         fields.custom_json_field(),
@@ -129,12 +156,22 @@ class RepoInfoGroup(dataclasses_json.DataClassJsonMixin):
             datetime_kind,
         )
 
+    def get_simplified_version(
+        self,
+        kind: person.PersonKind,
+    ) -> SimplifiedRepoInfoGroup:
+        earliest_repo = self.get_earliest_repo(kind)
+        if earliest_repo is None:
+            return SimplifiedRepoInfoGroup(None)
+
+        return SimplifiedRepoInfoGroup(
+            earliest_repo.get_simplified_version(kind),
+        )
+
     # override the method in order to add computable properties to JSON
     # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
     def to_dict(self, encode_json: bool = False) -> JSONObject:
         data = super().to_dict(encode_json=encode_json)
-
-        data["is_empty"] = self.is_empty
         data["author_earliest_repo"] = _to_dict_or_none(
             self.author_earliest_repo,
         )

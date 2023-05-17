@@ -14,10 +14,14 @@ Repositories are searched recursively in the specified base directories. The ear
   - support for specifying a repository as a base directory;
 - collecting data:
   - for a repository group:
-    - repository list;
-    - flag indicating that the repository list is empty;
-    - earliest repository by the author datetime (may be null);
-    - earliest repository by the committer datetime (may be null);
+    - full version:
+      - repository list;
+      - flag indicating that the repository list is empty;
+      - earliest repository by the author datetime (may be null);
+      - earliest repository by the committer datetime (may be null);
+    - simplified version (by person kind):
+      - earliest simplified repository (may be null);
+      - flag indicating that the earliest simplified repository is null;
   - for a repository:
     - full version:
       - repo directory;
