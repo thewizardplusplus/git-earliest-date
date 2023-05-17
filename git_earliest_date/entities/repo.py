@@ -1,4 +1,5 @@
 import typing
+import abc
 import dataclasses
 import pathlib
 
@@ -13,8 +14,33 @@ from . import person
 JSONObject: typing.TypeAlias = dict[str, Json]
 
 
+class BaseRepoInfo(dataclasses_json.DataClassJsonMixin):
+    @property
+    @abc.abstractmethod
+    def is_empty_repo(self) -> bool:
+        ...
+
+    # override the method in order to add computable properties to JSON
+    # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
+    def to_dict(self, encode_json: bool = False) -> JSONObject:
+        data = super().to_dict(encode_json=encode_json)
+        data["is_empty_repo"] = self.is_empty_repo
+
+        return data
+
+
 @dataclasses.dataclass
-class RepoInfo(dataclasses_json.DataClassJsonMixin):
+class SimplifiedRepoInfo(BaseRepoInfo):
+    repo_dir: pathlib.Path = fields.path_field()
+    earliest_root_commit: commit.SimplifiedCommitInfo | None  # type: ignore[misc]
+
+    @property
+    def is_empty_repo(self) -> bool:
+        return self.earliest_root_commit is None
+
+
+@dataclasses.dataclass
+class RepoInfo(BaseRepoInfo):
     repo_dir: pathlib.Path = fields.path_field()
     root_commits: list[commit.CommitInfo]  # type: ignore[misc]
 
@@ -42,12 +68,23 @@ class RepoInfo(dataclasses_json.DataClassJsonMixin):
             datetime_kind,
         )
 
+    def get_simplified_version(
+        self,
+        kind: person.PersonKind,
+    ) -> SimplifiedRepoInfo:
+        earliest_root_commit = self.get_earliest_root_commit(kind)
+        if earliest_root_commit is None:
+            return SimplifiedRepoInfo(self.repo_dir, None)
+
+        return SimplifiedRepoInfo(
+            self.repo_dir,
+            earliest_root_commit.get_simplified_version(kind),
+        )
+
     # override the method in order to add computable properties to JSON
     # TODO: remove after fixing issue https://github.com/lidatong/dataclasses-json/issues/176
     def to_dict(self, encode_json: bool = False) -> JSONObject:
         data = super().to_dict(encode_json=encode_json)
-
-        data["is_empty_repo"] = self.is_empty_repo
         data["author_earliest_root_commit"] = _to_dict_or_none(
             self.author_earliest_root_commit,
         )

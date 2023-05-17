@@ -19,11 +19,16 @@ Repositories are searched recursively in the specified base directories. The ear
     - earliest repository by the author datetime (may be null);
     - earliest repository by the committer datetime (may be null);
   - for a repository:
-    - repo directory;
-    - root commit list;
-    - flag indicating that the root commit list is empty;
-    - earliest root commit by the author datetime (may be null);
-    - earliest root commit by the committer datetime (may be null);
+    - full version:
+      - repo directory;
+      - root commit list;
+      - flag indicating that the root commit list is empty;
+      - earliest root commit by the author datetime (may be null);
+      - earliest root commit by the committer datetime (may be null);
+    - simplified version (by person kind):
+      - repo directory;
+      - earliest simplified root commit (may be null);
+      - flag indicating that the earliest simplified root commit is null;
   - for a commit:
     - full version:
       - hash (in the hexadecimal format);

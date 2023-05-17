@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/simplified_repo_info.schema.json",
+  "title": "SimplifiedRepoInfo",
+  "type": "object",
+  "required": ["repo_dir", "earliest_root_commit", "is_empty_repo"],
+  "properties": {
+    "repo_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "earliest_root_commit": {
+      "oneOf": [
+        { "$ref": "simplified_commit_info.schema.json" },
+        { "type": "null" }
+      ]
+    },
+    "is_empty_repo": {
+      "type": "boolean"
+    }
+  }
+}

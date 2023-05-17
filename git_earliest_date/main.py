@@ -24,17 +24,16 @@ def main() -> None:
         if options.verbose > 1:
             for repo_info in repo_infos_1:
                 logger.get_logger().debug(repo_info.to_json(ensure_ascii=False))
-                for root_commit in repo_info.root_commits:
-                    logger.get_logger().debug(
-                        root_commit.get_simplified_version(
-                            person.PersonKind.AUTHOR,
-                        ).to_json(ensure_ascii=False),
-                    )
-                    logger.get_logger().debug(
-                        root_commit.get_simplified_version(
-                            person.PersonKind.COMMITTER,
-                        ).to_json(ensure_ascii=False),
-                    )
+                logger.get_logger().debug(
+                    repo_info.get_simplified_version(
+                        person.PersonKind.AUTHOR,
+                    ).to_json(ensure_ascii=False),
+                )
+                logger.get_logger().debug(
+                    repo_info.get_simplified_version(
+                        person.PersonKind.COMMITTER,
+                    ).to_json(ensure_ascii=False),
+                )
 
         repo_info_group = repo.RepoInfoGroup(list(repo_infos_2))
         print(repo_info_group.to_json(ensure_ascii=False))
