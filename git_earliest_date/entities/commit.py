@@ -11,6 +11,14 @@ from . import fields
 
 
 @dataclasses.dataclass
+class SimplifiedCommitInfo(dataclasses_json.DataClassJsonMixin):
+    hash: str
+    person: person.PersonInfo
+    datetime: datetime.datetime = fields.datetime_field()
+    message: str  # type: ignore[misc]
+
+
+@dataclasses.dataclass
 class CommitInfo(dataclasses_json.DataClassJsonMixin):
     hash: str
     author: person.PersonInfo
@@ -42,6 +50,17 @@ class CommitInfo(dataclasses_json.DataClassJsonMixin):
         return typing.cast(
             datetime.datetime,
             self._get_attribute_by_kind(kind, suffix="_datetime"),
+        )
+
+    def get_simplified_version(
+        self,
+        kind: person.PersonKind,
+    ) -> SimplifiedCommitInfo:
+        return SimplifiedCommitInfo(
+            self.hash,
+            self.get_person(kind),
+            self.get_datetime(kind),
+            self.message,
         )
 
     def _get_attribute_by_kind(

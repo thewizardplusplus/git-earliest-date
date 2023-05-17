@@ -25,12 +25,18 @@ Repositories are searched recursively in the specified base directories. The ear
     - earliest root commit by the author datetime (may be null);
     - earliest root commit by the committer datetime (may be null);
   - for a commit:
-    - hash (in the hexadecimal format);
-    - author person;
-    - author datetime (in the ISO 8601 format);
-    - committer person;
-    - committer datetime (in the ISO 8601 format);
-    - message (may be empty);
+    - full version:
+      - hash (in the hexadecimal format);
+      - author person;
+      - author datetime (in the ISO 8601 format);
+      - committer person;
+      - committer datetime (in the ISO 8601 format);
+      - message (may be empty);
+    - simplified version (by person kind):
+      - hash (in the hexadecimal format);
+      - person;
+      - datetime (in the ISO 8601 format);
+      - message (may be empty);
   - for a person:
     - name (may be null);
     - email (may be null);
