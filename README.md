@@ -74,12 +74,12 @@ $ python3 -m pip install .
 ```
 $ git-earliest-date -v | --version
 $ git-earliest-date -h | --help
-$ git-earliest-date [options] [<base_dirs>...]
+$ git-earliest-date [options] [<base-dirs>...]
 ```
 
 Positional arguments:
 
-- `<base_dirs>` &mdash; a list of base directories with repositories (default: `["."]`).
+- `<base-dirs>` &mdash; a list of base directories with repositories (default: `["."]`).
 
 Options:
 

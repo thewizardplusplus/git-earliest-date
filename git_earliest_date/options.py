@@ -45,6 +45,7 @@ def parse_options() -> OptionGroup:
 
     parser.add_argument(
         "base_dirs",
+        metavar="base-dirs",
         type=pathlib.Path,
         nargs="*",
         default=[pathlib.Path(".")],
