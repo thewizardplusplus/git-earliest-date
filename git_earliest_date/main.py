@@ -5,6 +5,7 @@ from . import options as options_module
 from . import logger
 from . import get_repo_dirs
 from . import get_root_commits
+from .entities import get_simplified_version
 from .entities import repo
 
 
@@ -22,18 +23,16 @@ def main() -> None:
 
         if options.verbose > 1:
             for repo_info in repo_infos_1:
-                result = (
-                    repo_info.get_simplified_version(options.by_kind)
-                    if options.by_kind is not None
-                    else repo_info
+                result = get_simplified_version.get_simplified_version(
+                    repo_info,
+                    options.by_kind,
                 )
                 logger.get_logger().debug(result.to_json(ensure_ascii=False))
 
         repo_info_group = repo.RepoInfoGroup(list(repo_infos_2))
-        result = (
-            repo_info_group.get_simplified_version(options.by_kind)
-            if options.by_kind is not None
-            else repo_info_group
+        result = get_simplified_version.get_simplified_version(
+            repo_info_group,
+            options.by_kind,
         )
         print(result.to_json(ensure_ascii=False))
     except Exception as exception:
