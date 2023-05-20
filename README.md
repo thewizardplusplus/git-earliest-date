@@ -13,6 +13,7 @@ Repositories are searched recursively in the specified base directories. The ear
   - support for specifying several base directories;
   - support for specifying a repository as a base directory;
 - collecting data:
+  - filter the results by person kind (optionally);
   - for a repository group:
     - full version:
       - repository list;
@@ -84,7 +85,8 @@ Options:
 
 - `-v`, `--version` &mdash; show the program version number and exit;
 - `-h`, `--help` &mdash; show this help message and exit;
-- `-V`, `--verbose` &mdash; verbose logging; can be specified several times: the more times, the more verbose (default: `0`).
+- `-k {AUTHOR,COMMITTER}`, `--by-kind {AUTHOR,COMMITTER}` &mdash; filter the results by person kind;
+- `-V`, `--verbose` &mdash; verbose logging; can be specified several times: the more times, the more verbose.
 
 ## Result Data
 
