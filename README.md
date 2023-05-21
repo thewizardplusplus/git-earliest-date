@@ -96,7 +96,6 @@ Example of result data: [docs/repo_info_group.example.json](docs/repo_info_group
 
 ## Utilities
 
-- [clean](tools/clean) &mdash; the utility for cleaning result data
 - [validate-by-schema](tools/validate-by-schema) &mdash; the utility for validating result data by its JSON Schema
 
 ## License
