@@ -1,5 +1,6 @@
 import typing
 import pathlib
+import enum
 import itertools
 
 import termcolor
@@ -8,6 +9,12 @@ from . import logger
 
 
 PathSequence: typing.TypeAlias = typing.Iterator[pathlib.Path]
+
+
+@enum.unique
+class _RepoStatus(enum.Enum):
+    IS_NOT_REPO = enum.auto()
+    IS_REPO = enum.auto()
 
 
 def get_repo_dirs(base_dir_sequence: PathSequence) -> PathSequence:
@@ -25,7 +32,7 @@ def _get_repo_dirs_for_one_base(base_dir: pathlib.Path) -> PathSequence:
     if not base_dir.is_dir():
         raise RuntimeError(f"path {formatted_base_dir} is not a dir")
 
-    if _is_repo_dir(base_dir):
+    if _get_repo_status(base_dir) == _RepoStatus.IS_REPO:
         logger.get_logger().warn(f"path {formatted_base_dir} is a repo itself")
 
         yield base_dir
@@ -34,9 +41,12 @@ def _get_repo_dirs_for_one_base(base_dir: pathlib.Path) -> PathSequence:
     dir_sequence = _get_subdirs(base_dir)
     dir_sequence_1, dir_sequence_2 = itertools.tee(dir_sequence, 2)
 
-    yield from _filter_repo_dirs(dir_sequence_1)
+    yield from _select_dirs_by_repo_status(dir_sequence_1, _RepoStatus.IS_REPO)
 
-    not_repo_dir_sequence = _filter_not_repo_dirs(dir_sequence_2)
+    not_repo_dir_sequence = _select_dirs_by_repo_status(
+        dir_sequence_2,
+        _RepoStatus.IS_NOT_REPO,
+    )
     yield from get_repo_dirs(not_repo_dir_sequence)
 
 
@@ -44,13 +54,17 @@ def _get_subdirs(base_dir: pathlib.Path) -> PathSequence:
     yield from (entity for entity in base_dir.iterdir() if entity.is_dir())
 
 
-def _filter_repo_dirs(dir_sequence: PathSequence) -> PathSequence:
-    yield from (dir for dir in dir_sequence if _is_repo_dir(dir))
+def _select_dirs_by_repo_status(
+    dir_sequence: PathSequence,
+    repo_status: _RepoStatus,
+) -> PathSequence:
+    yield from (
+        dir for dir in dir_sequence if _get_repo_status(dir) == repo_status
+    )
 
 
-def _filter_not_repo_dirs(dir_sequence: PathSequence) -> PathSequence:
-    yield from (dir for dir in dir_sequence if not _is_repo_dir(dir))
+def _get_repo_status(dir: pathlib.Path) -> _RepoStatus:
+    if (dir / ".git").exists():
+        return _RepoStatus.IS_REPO
 
-
-def _is_repo_dir(dir: pathlib.Path) -> bool:
-    return (dir / ".git").exists()
+    return _RepoStatus.IS_NOT_REPO
