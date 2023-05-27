@@ -60,7 +60,7 @@ def get_earliest_commit(
 def _filter_nonempty_repos(
     repos: repo.RepoInfoSequence,
 ) -> repo.RepoInfoSequence:
-    yield from (repo for repo in repos if not repo.is_empty_repo)
+    return (repo for repo in repos if not repo.is_empty_repo)
 
 
 def _min_or_none(

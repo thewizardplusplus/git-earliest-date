@@ -18,7 +18,7 @@ class _RepoStatus(enum.Enum):
 
 
 def get_repo_dirs(base_dir_sequence: PathSequence) -> PathSequence:
-    yield from (
+    return (
         repo_dir
         for base_dir in base_dir_sequence
         for repo_dir in _get_repo_dirs_for_one_base(base_dir)
@@ -51,16 +51,14 @@ def _get_repo_dirs_for_one_base(base_dir: pathlib.Path) -> PathSequence:
 
 
 def _get_subdirs(base_dir: pathlib.Path) -> PathSequence:
-    yield from (entity for entity in base_dir.iterdir() if entity.is_dir())
+    return (entity for entity in base_dir.iterdir() if entity.is_dir())
 
 
 def _select_dirs_by_repo_status(
     dir_sequence: PathSequence,
     repo_status: _RepoStatus,
 ) -> PathSequence:
-    yield from (
-        dir for dir in dir_sequence if _get_repo_status(dir) == repo_status
-    )
+    return (dir for dir in dir_sequence if _get_repo_status(dir) == repo_status)
 
 
 def _get_repo_status(dir: pathlib.Path) -> _RepoStatus:
