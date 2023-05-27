@@ -1,0 +1,16 @@
+{
+  "earliest_repo": {
+    "repo_dir": "/home/thewizardplusplus/projects/portfolio/go-hashmap",
+    "earliest_root_commit": {
+      "hash": "1c58edfab26c8087db9610e5e3c77cfaeebd35b4",
+      "person": {
+        "name": "thewizardplusplus",
+        "email": "thewizardplusplus@yandex.ru"
+      },
+      "datetime": "2019-04-30T00:56:14.000000+03:00",
+      "message": "Add a base of the project\n"
+    },
+    "is_empty_repo": false
+  },
+  "is_empty": false
+}

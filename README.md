@@ -92,7 +92,10 @@ Options:
 
 Format of result data in the [JSON Schema](https://json-schema.org/) format: [docs/schemas](docs/schemas).
 
-Example of result data: [docs/repo_info_group.example.json](docs/repo_info_group.example.json).
+Example of result data:
+
+- full version: [docs/examples/repo_info_group.example.json](docs/examples/repo_info_group.example.json)
+- simplified version: [docs/examples/simplified_repo_info_group.example.json](docs/examples/simplified_repo_info_group.example.json)
 
 ## Utilities
 
@@ -102,4 +105,4 @@ Example of result data: [docs/repo_info_group.example.json](docs/repo_info_group
 
 The MIT License (MIT)
 
-Copyright &copy; 2022 thewizardplusplus
+Copyright &copy; 2022-2023 thewizardplusplus
